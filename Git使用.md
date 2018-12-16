@@ -10,3 +10,5 @@ git 是目前世界上最先进的分布式版本控制系统
 
 1. 使用命令 `git add <file> <file> ` 可以反复使用
 2. 使用命令 `git commit -m <message>` 完成
+
+掌握工作区的状态使用 `git status` 命令，使用 `git diff` 查看修改内容
