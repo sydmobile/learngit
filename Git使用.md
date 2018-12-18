@@ -58,4 +58,22 @@ Git 跟踪并管理的是修改，而非文件。
 
 场景三：已经提交了不合适的修改到版本库，想要撤销本次提交。使用 `git reset HEAD^`  前提是没有推送到远程仓库。
 
-qq
+
+
+## 远程仓库
+
+Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不同的机器上。
+
+由于本地 Git 仓库 和 GitHub 仓库之间的传输是通过 SSH 加密的，所以，需要设置：
+
+1. 创建 SSH Key
+
+   `ssh-keygen -t rsa -C youreamail@example.com`  
+
+   然后一路回车
+
+   然后就可以在用户的主目录里面找到 `.ssh` 目录，里面有 `id_rsa` 和 `id_rsa.pub` 两个文件。这两个就是 SSH Key 的密钥对。`id_rsa` 是私钥，不能泄露。`id_rsa_pub` 是公钥。
+
+2. 登录 GitHub ,打开 setting 添加 SSH key
+
+GitHub 需要 SSH Key 是因为 Github 需要识别出你推送的提交确实是你推送的。因为 GitHub 知道了你的公钥了，而你手里有私钥。
